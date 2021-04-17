@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Row } from 'reactstrap';
 import { Addisjon } from './Addisjon';
 import { VisOppgave } from './VisOppgave';
 import allebamser from './bamser.json';
@@ -40,13 +41,17 @@ export class Home extends Component {
     }
 
     render() {
-        var bamseliste = this.state.bamser.map(b => <div className="bamse"><img src={b.imageUrl}/></div>);
+        var bamseliste = this.state.bamser.map(b => <div className="bamse"><img src={b.imageUrl} /></div>);
         return (
             <div>
                 <h1>Bamsespillet HHJ</h1>
-                <VisOppgave oppgave={this.state.oppgave} riktigSvar={this.riktigSvar} nesteOppgave={this.nesteOppgave} />
-                <div className="poeng">Poeng: {this.state.poeng}</div>
-                <div className="bamser">{bamseliste}</div>
+                <Row>
+                    <div className="col-sm-12 col-md-6 col-lg-3">
+                        <VisOppgave oppgave={this.state.oppgave} riktigSvar={this.riktigSvar} nesteOppgave={this.nesteOppgave} />
+                        <div className="poeng">Poeng: {this.state.poeng}</div>
+                    </div>
+                    <div className="bamser col-sm-12 col-md-6 col-lg-9">{bamseliste}</div>
+                </Row>
             </div>
         );
     }

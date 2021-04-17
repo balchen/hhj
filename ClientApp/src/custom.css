@@ -22,3 +22,44 @@ div.bamser {
 div.bamser div.bamse img {
     width: 200px;
 }
+
+div.oppgavetekst {
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+input.svartekst {
+    font-size: x-large;
+    width: 3em;
+    margin-bottom: 0.5em;
+}
+
+div.buttons {
+    margin-top: 0.5em;
+}
+
+button.svarknapp {
+    background-color: green;
+    color: white;
+    font-size: larger;
+    padding: 1em;
+    margin-right: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+button.nesteoppgaveknapp:enabled {
+    display: inline-block;
+    background-color: green;
+    color: white;
+    font-size: larger;
+    padding: 1em;
+}
+
+button.nesteoppgaveknapp:disabled {
+    display: inline-block;
+    background-color: white;
+    color: gray;
+    font-size: larger;
+    padding: 1em;
+}

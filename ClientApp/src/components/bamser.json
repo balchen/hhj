@@ -1,3 +1,42 @@
 [
-    { "id": "1", "imageUrl": "/images/bamser/Teddy.png", "name": "Teddy" }
+  {
+    "id": "1",
+    "imageUrl": "/images/bamser/Teddy.png",
+    "name": "Teddy"
+  },
+  {
+    "id": "2",
+    "imageUrl": "/images/bamser/Pinky.png",
+    "name": "Pinky"
+  },
+  {
+    "id": "3",
+    "imageUrl": "/images/bamser/Wonky.png",
+    "name": "Wonky"
+  },
+  {
+    "id": "4",
+    "imageUrl": "/images/bamser/Spooky.png",
+    "name": "Spooky"
+  },
+  {
+    "id": "5",
+    "imageUrl": "/images/bamser/Sussy.png",
+    "name": "Sussy"
+  },
+  {
+    "id": "6",
+    "imageUrl": "/images/bamser/Chunky.png",
+    "name": "Chunky"
+  },
+  {
+    "id": "7",
+    "imageUrl": "/images/bamser/Starry.png",
+    "name": "Starry"
+  },
+  {
+    "id": "8",
+    "imageUrl": "/images/bamser/Hearty.png",
+    "name": "Hearty"
+  }
 ]
