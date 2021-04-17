@@ -12,3 +12,13 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+div.bamser {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.bamser div.bamse img {
+    width: 200px;
+}

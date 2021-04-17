@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Addisjon } from './Addisjon';
 import { VisOppgave } from './VisOppgave';
+import allebamser from './bamser.json';
 
 export class Home extends Component {
     constructor() {
@@ -14,7 +15,8 @@ export class Home extends Component {
         this.state = {
             oppgaveType: oppgaveType,
             oppgave: oppgaveType.ny(),
-            poeng: parseInt("0" + localStorage.getItem("poeng"))
+            poeng: parseInt("0" + localStorage.getItem("poeng")),
+            bamser: JSON.parse(localStorage.getItem("bamser") || "[]") || []
         };
     }
 
@@ -23,16 +25,28 @@ export class Home extends Component {
     }
 
     riktigSvar() {
-        this.setState({ poeng: this.state.poeng + 1 });
-        localStorage.setItem("poeng", this.state.poeng + 1);
+        var nyepoeng = this.state.poeng + 1;
+        this.setState({ poeng: nyepoeng });
+        localStorage.setItem("poeng", nyepoeng);
+
+        if (nyepoeng % 5 === 0) {
+            var bamseIndex = Math.floor(Math.random() * (allebamser.length));
+            var nybamse = { ...allebamser[bamseIndex], shiny: Math.random() > 0.9 };
+            var bamser = this.state.bamser;
+            bamser.push(nybamse);
+            this.setState({ bamser: bamser });
+            localStorage.setItem("bamser", JSON.stringify(bamser));
+        }
     }
 
     render() {
+        var bamseliste = this.state.bamser.map(b => <div className="bamse"><img src={b.imageUrl}/></div>);
         return (
             <div>
                 <h1>Bamsespillet HHJ</h1>
                 <VisOppgave oppgave={this.state.oppgave} riktigSvar={this.riktigSvar} nesteOppgave={this.nesteOppgave} />
                 <div className="poeng">Poeng: {this.state.poeng}</div>
+                <div className="bamser">{bamseliste}</div>
             </div>
         );
     }

@@ -40,7 +40,7 @@ export class VisOppgave extends Component {
                 <div className="oppgavetekst">{this.props.oppgave.oppgavetekst()}</div>
                 <input autoFocus className="svartekst" type="text" value={this.state.svar} onChange={this.svarEndret} />
                 <button className="svarknapp" onClick={this.sjekkSvar}>Sjekk svar</button>
-                <button classname="nesteoppgaveknapp" onClick={this.nesteOppgave} disabled={!this.state.nesteOppgaveTilgjengelig}>Neste oppgave</button>
+                <button className="nesteoppgaveknapp" onClick={this.nesteOppgave} disabled={!this.state.nesteOppgaveTilgjengelig}>Neste oppgave</button>
             </div>
         );
     }
