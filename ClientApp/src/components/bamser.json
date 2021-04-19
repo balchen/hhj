@@ -38,5 +38,30 @@
     "id": "8",
     "imageUrl": "/images/bamser/Hearty.png",
     "name": "Hearty"
+  },
+  {
+    "id": "9",
+    "imageUrl": "/images/bamser/Baby.png",
+    "name": "Baby"
+  },
+  {
+    "id": "10",
+    "imageUrl": "/images/bamser/Baby Hearty.png",
+    "name": "Baby Hearty"
+  },
+  {
+    "id": "11",
+    "imageUrl": "/images/bamser/Simply.png",
+    "name": "Simply"
+  },
+  {
+    "id": "12",
+    "imageUrl": "/images/bamser/Rosy.png",
+    "name": "Rosy"
+  },
+  {
+    "id": "13",
+    "imageUrl": "/images/bamser/Saddy.png",
+    "name": "Saddy"
   }
 ]
